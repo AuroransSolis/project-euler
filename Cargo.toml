@@ -1,0 +1,11 @@
+[workspace]
+members = ["problem-1", "problem-2", "problem-3"]
+
+[profile.release]
+opt-level = 3
+debug = false
+lto = true
+debug-assertions = false
+codegen-units = 1
+incremental = false
+overflow-checks = false
