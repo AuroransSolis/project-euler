@@ -18,7 +18,7 @@ fn main() {
             break;
         } else if !primes
             .iter()
-            .take_while(|&prime| prime * prime < candidate)
+            .take_while(|&prime| prime * prime <= candidate)
             .any(|&prime| candidate % prime == 0)
         {
             primes.push(candidate);
