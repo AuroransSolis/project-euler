@@ -18,8 +18,10 @@ fn fib_r(a: u32, b: u32, t: &mut u32) {
     let c = a + b;
     if c >= 4_000_000 {
         return;
-    } else if c % 2 == 0 {
-        *t += c;
+    } else {
+        if c % 2 == 0 {
+            *t += c;
+        }
         fib_r(b, c, t);
     }
 }
