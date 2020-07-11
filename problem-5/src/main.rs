@@ -21,11 +21,9 @@ fn main() {
         prime_factorization(&primes, &mut primes_and_powers, n);
     }
     // Insert 1 for all primes in primes that aren't in primes_and_powers.
-    primes
-        .into_iter()
-        .for_each(|prime| {
-            let _ = primes_and_powers.entry(prime).or_insert(1);
-        });
+    primes.into_iter().for_each(|prime| {
+        let _ = primes_and_powers.entry(prime).or_insert(1);
+    });
     // The lowest common multiple of all the numbers in [1, MAX] will be the product of each of the
     // primes in primes_and_powers raised to its corresponding power in the hashmap.
     let lcm = primes_and_powers
